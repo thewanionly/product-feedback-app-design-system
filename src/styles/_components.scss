@@ -1,0 +1,33 @@
+.button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  /** SIZES **/
+  &.medium {
+    width: 158px;
+    height: 44px;
+  }
+
+  /** TYPES **/
+  &.primary {
+    background-color: #ad1fea;
+    color: #f2f4fe;
+  }
+
+  &.secondary {
+    background-color: #4661e6;
+    color: #f2f4fe;
+  }
+
+  &.tertiary {
+    background-color: #3a4374;
+    color: #f2f4fe;
+  }
+
+  &.danger {
+    background-color: #d73737;
+    color: #f2f4fe;
+  }
+}

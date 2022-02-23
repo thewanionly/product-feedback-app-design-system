@@ -1,7 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import Button from './atoms/Button'
 
-import App from './App.jsx'
-import './styles/main.scss'
-
-ReactDOM.render(<App />, document.getElementById('root'))
+export { Button }

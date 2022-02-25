@@ -1,0 +1,92 @@
+/*=============================================
+                #VARIABLES
+=============================================*/
+
+/*=============================================
+=            Colors                           =
+=============================================*/
+
+/**
+ * These are the colors of our desing system.
+ * The color names are the actual name of the colors and doesn't have any meaningful value.
+ */
+
+/* Brand Colors */
+
+$purple: #ad1fea;
+$purple-light: #c75af6;
+
+$blue: #4661e6;
+$blue-light: #7c91f9;
+
+$navy-blue-dark: #373f68;
+$navy-blue: #3a4374;
+$navy-blue-light: #656ea3;
+$navy-blue-lighter: #647196;
+
+$red: #d73737;
+$red-light: #e98888;
+
+$orange: #f49f85;
+$sky-blue: #62bcfa;
+
+/* Neutral Colors */
+$white: #ffffff;
+$gray: #f2f4ff;
+$gray-light: #f7f8fd;
+
+/*=============================================
+=            Typography                       =
+=============================================*/
+
+/* Font-family */
+$jost: 'Jost', sans-serif;
+
+/* Font sizes */
+$fs-base: 1.6rem; // 16px
+$fs-sm: 1.5rem; // 15px
+$fs-xs: 1.3rem; // 13px
+
+/* Heading font sizes */
+$h-1: 2.4rem; // 24px
+$h-2: 2rem; // 20px
+$h-3: 1.8rem; // 18px
+$h-4: 1.4rem; // 14px
+
+/* Font weights */
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+/* Line height */
+$lh-xxl: 3.5rem; //35px
+$lh-xl: 2.9rem; //29px
+$lh-lg: 2.6rem; //26px
+$lh-base: 2.3rem; //23px
+$lh-sm: 2.2rem; //22px
+$lh-xs: 2rem; //20px
+$lh-xxs: 1.9rem; //19px
+
+/* Letter spacing */
+$ls-lg: -0.033rem; //-0.33px
+$ls-base: -0.025rem; //-0.25px
+$ls-sm: -0.02rem; //-0.2px
+
+/*=============================================
+=            Spacing                          =
+=============================================*/
+
+/**
+ * These values are not defined in the design file.
+ * These values are based on an 4-8pt grid system.
+ */
+
+$sp-xxxl: 5.6rem; //56px
+$sp-xxl: 4.8rem; //48px
+$sp-xl: 4rem; //40px
+$sp-lg: 3.2rem; //32px
+$sp-md: 2.4rem; //24px
+$sp-base: 1.6rem; //16px
+$sp-sm: 0.8rem; //8px
+$sp-xs: 0.4rem; //4px
+$sp-none: 0; //0px

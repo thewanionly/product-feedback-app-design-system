@@ -1,0 +1,55 @@
+/*=============================================
+                #TYPOGRAPHY
+=============================================*/
+
+/**
+ * This file defines the default font sizes to be used on headings and texts. The defaults come
+ * from the palette defined in _variables.scss.
+ */
+
+/*=============================================
+=            Body font family                  =
+=============================================*/
+$body-font-family: var(--pfa-body-font-family, $jost) !default;
+
+/*=============================================
+=            Body font sizes                =
+=============================================*/
+$body-font-size-1: var(--pfa-body-font-size-1, $fs-base) !default;
+$body-font-size-2: var(--pfa-body-font-size-2, $fs-sm) !default;
+$body-font-size-3: var(--pfa-body-font-size-3, $fs-xs) !default;
+
+/*=============================================
+=            Body font weights                =
+=============================================*/
+$body-font-weight-1: var(--pfa-body-font-weight-1, $fw-regular) !default;
+$body-font-weight-2: var(--pfa-body-font-weight-2, $fw-semibold) !default;
+
+/*=============================================
+=            Heading font sizes               =
+=============================================*/
+$h-1-font-size: var(--pfa-h1-font-size, $h-1) !default;
+$h-2-font-size: var(--pfa-h2-font-size, $h-2) !default;
+$h-3-font-size: var(--pfa-h3-font-size, $h-3) !default;
+$h-4-font-size: var(--pfa-h4-font-size, $h-4) !default;
+
+/*=============================================
+=            Heading font weight             =
+=============================================*/
+$h-font-weight: var(--pfa-h-font-weight, $fw-bold) !default;
+
+/*=============================================
+=            Heading letter spacing           =
+=============================================*/
+$h-1-letter-spacing: var(--pfa-h1-letter-spacing, $ls-lg) !default;
+$h-2-letter-spacing: var(--pfa-h2-letter-spacing, $ls-base) !default;
+$h-3-letter-spacing: var(--pfa-h3-letter-spacing, $ls-base) !default;
+$h-4-letter-spacing: var(--pfa-h4-letter-spacing, $ls-sm) !default;
+
+/*=============================================
+=           Line heights                     =
+=============================================*/
+
+/*=============================================
+=                Spacing                      =
+=============================================*/

@@ -1,0 +1,31 @@
+/*=============================================
+                #COLORS
+=============================================*/
+
+/**
+ * This file defines the actual colors that will be used for styling of our components.
+ * These color naming scheme is meaningful to our system, describing its purpose.
+ * They will default to the palette we defined in the _variable.scss file.
+ * This is our default palette, and devs can override this with their own variables.
+ */
+
+/*=============================================
+=                 Button colors               =
+=============================================*/
+$main-btn-text-color: var(--pfa-main-btn-text-color, $gray) !default;
+$btn-with-icon-text-color: var(--pfa-btn-with-icon-text-color, $white) !default;
+$btn-no-bg-text-color: var(--pfa-btn-no-bg-text-color, $navy-blue-lighter) !default;
+
+$btn-primary-bg-color: var(--pfa-btn-primary-bg-color, $purple) !default;
+$btn-primary-bg-hover-color: var(--pfa-btn-primary-bg-hover-color, $purple-light) !default;
+
+$btn-secondary-bg-color: var(--pfa-btn-secondary-bg-color, $blue) !default;
+$btn-secondary-bg-hover-color: var(--pfa-btn-secondary-bg-hover-color, $blue-light) !default;
+
+$btn-tertiary-bg-color: var(--pfa-btn-tertiary-bg-color, $navy-blue) !default;
+$btn-tertiary-bg-hover-color: var(--pfa-btn-tertiary-bg-hover-color, $navy-blue-light) !default;
+
+$btn-danger-bg-color: var(--pfa-btn-danger-bg-color, $red) !default;
+$btn-danger-bg-hover-color: var(--pfa-btn-danger-bg-hover-color, $red-light) !default;
+
+$btn-with-icon-bg-color: var(--pfa-btn-with-icon-bg-color, $navy-blue-dark) !default;

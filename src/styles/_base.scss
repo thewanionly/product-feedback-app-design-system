@@ -1,7 +1,56 @@
-// Typography
-$font-family: 'Jost', sans-serif;
-$font-size-regular-1: 1.6rem;
+/*=============================================
+                   #BASE
+=============================================*/
 
+/*=============================================
+=                   Root                      =
+=============================================*/
+:root {
+  // Colors
+  --pfa-main-btn-text-color: #{$gray};
+  --pfa-btn-with-icon-text-color: #{$white};
+  --pfa-btn-no-bg-text-color: #{$navy-blue-lighter};
+
+  --pfa-btn-primary-bg-color: #{$purple};
+  --pfa-btn-primary-bg-hover-color: #{$purple-light};
+
+  --pfa-btn-secondary-bg-color: #{$blue};
+  --pfa-btn-secondary-bg-hover-color: #{$blue-light};
+
+  --pfa-btn-tertiary-bg-color: #{$navy-blue};
+  --pfa-btn-tertiary-bg-hover-color: #{$navy-blue-light};
+
+  --pfa-btn-danger-bg-color: #{$red};
+  --pfa-btn-danger-bg-hover-color: #{$red-light};
+
+  --pfa-btn-with-icon-bg-color: #{$navy-blue-dark};
+
+  //Typography
+  --pfa-body-font-family: #{$jost};
+
+  --pfa-body-font-size-1: #{$fs-base};
+  --pfa-body-font-size-2: #{$fs-sm};
+  --pfa-body-font-size-3: #{$fs-xs};
+
+  --pfa-body-font-weight-1: #{$fw-regular};
+  --pfa-body-font-weight-2: #{$fw-semibold};
+
+  --pfa-h1-font-size: #{$h-1};
+  --pfa-h2-font-size: #{$h-2};
+  --pfa-h3-font-size: #{$h-3};
+  --pfa-h4-font-size: #{$h-4};
+
+  --pfa-h-font-weight: #{$fw-bold};
+
+  --pfa-h1-letter-spacing: #{$ls-lg};
+  --pfa-h2-letter-spacing: #{$ls-base};
+  --pfa-h3-letter-spacing: #{$ls-base};
+  --pfa-h4-letter-spacing: #{$ls-sm};
+}
+
+/*=============================================
+=                 Reset                     =
+=============================================*/
 *,
 *::before,
 *::after {
@@ -10,12 +59,44 @@ $font-size-regular-1: 1.6rem;
   box-sizing: inherit;
 }
 
+/*=============================================
+=                 Global Styles                =
+=============================================*/
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
 }
 
 body {
-  font-family: $font-family;
-  font-size: $font-size-regular-1;
+  font-family: $body-font-family;
+  font-size: $body-font-size-1;
+}
+
+h1 {
+  font-size: $h-1-font-size;
+  font-weight: $h-font-weight;
+  // line-height: ;
+  letter-spacing: $h-1-letter-spacing;
+}
+
+h2 {
+  font-size: $h-2-font-size;
+  font-weight: $h-font-weight;
+  // line-height: ;
+  letter-spacing: $h-2-letter-spacing;
+}
+
+h3 {
+  font-size: $h-3-font-size;
+  font-weight: $h-font-weight;
+  // line-height: ;
+  letter-spacing: $h-3-letter-spacing;
+}
+
+h4 {
+  font-size: $h-4-font-size;
+  font-weight: $h-font-weight;
+  // line-height: ;
+  letter-spacing: $h-4-letter-spacing;
 }

@@ -25,7 +25,7 @@ const Button = ({ className, type, size, onClick, icon, iconPos, children }) => 
 
   return (
     <button className={buttonClassName} onClick={onClick}>
-      {children}
+      <h4>{children}</h4>
     </button>
   )
 }

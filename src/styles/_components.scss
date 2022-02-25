@@ -12,22 +12,38 @@
 
   /** TYPES **/
   &.primary {
-    background-color: #ad1fea;
-    color: #f2f4fe;
+    background-color: $btn-primary-bg-color;
+    color: $main-btn-text-color;
+
+    &:hover {
+      background-color: $btn-primary-bg-hover-color;
+    }
   }
 
   &.secondary {
-    background-color: #4661e6;
-    color: #f2f4fe;
+    background-color: $btn-secondary-bg-color;
+    color: $main-btn-text-color;
+
+    &:hover {
+      background-color: $btn-secondary-bg-hover-color;
+    }
   }
 
   &.tertiary {
-    background-color: #3a4374;
-    color: #f2f4fe;
+    background-color: $btn-tertiary-bg-color;
+    color: $main-btn-text-color;
+
+    &:hover {
+      background-color: $btn-tertiary-bg-hover-color;
+    }
   }
 
   &.danger {
-    background-color: #d73737;
-    color: #f2f4fe;
+    background-color: $btn-danger-bg-color;
+    color: $main-btn-text-color;
+
+    &:hover {
+      background-color: $btn-danger-bg-hover-color;
+    }
   }
 }

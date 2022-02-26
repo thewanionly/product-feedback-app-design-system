@@ -21,15 +21,25 @@
   padding-top: map-get($spacing, $space);
 }
 
-@mixin padding-right($space) {
-  padding-right: map-get($spacing, $space);
-}
-
 @mixin padding-bottom($space) {
   padding-bottom: map-get($spacing, $space);
 }
 
+@mixin padding-right($space) {
+  padding-right: map-get($spacing, $space);
+}
+
 @mixin padding-left($space) {
+  padding-left: map-get($spacing, $space);
+}
+
+@mixin padding-vertical($space) {
+  padding-top: map-get($spacing, $space);
+  padding-bottom: map-get($spacing, $space);
+}
+
+@mixin padding-horizontal($space) {
+  padding-right: map-get($spacing, $space);
   padding-left: map-get($spacing, $space);
 }
 
@@ -45,15 +55,25 @@
   margin-top: map-get($spacing, $space);
 }
 
-@mixin margin-right($space) {
-  margin-right: map-get($spacing, $space);
-}
-
 @mixin margin-bottom($space) {
   margin-bottom: map-get($spacing, $space);
 }
 
+@mixin margin-right($space) {
+  margin-right: map-get($spacing, $space);
+}
+
 @mixin margin-left($space) {
+  margin-left: map-get($spacing, $space);
+}
+
+@mixin margin-vertical($space) {
+  margin-top: map-get($spacing, $space);
+  margin-bottom: map-get($spacing, $space);
+}
+
+@mixin margin-horizontal($space) {
+  margin-right: map-get($spacing, $space);
   margin-left: map-get($spacing, $space);
 }
 
@@ -66,5 +86,5 @@
 }
 
 @mixin height($space) {
-  width: map-get($spacing, $space);
+  height: map-get($spacing, $space);
 }

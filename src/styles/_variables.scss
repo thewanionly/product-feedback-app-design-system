@@ -81,15 +81,37 @@ $ls-sm: -0.02rem; //-0.2px
  * These values are based on an 4-8pt grid system.
  */
 $spacing: (
-  xxxl: 5.6rem,
+  xxl-4: 20.8rem,
+  //208px
+  xxl-3: 19.2rem,
+  //192px
+  xxl-2: 17.6rem,
+  //176px
+  xxl-1: 16rem,
+  //160px
+  xl-4: 14.4rem,
+  //144px
+  xl-3: 12.8rem,
+  //128px
+  xl-2: 11.2rem,
+  //112px
+  xl-1: 9.6rem,
+  //96px
+  lg-4: 8rem,
+  //80px
+  lg-3: 7.2rem,
+  //72px
+  lg-2: 6.4rem,
+  //64px
+  lg-1: 5.6rem,
   //56px
-  xxl: 4.8rem,
+  md-4: 4.8rem,
   //48px
-  xl: 4rem,
+  md-3: 4rem,
   //40px
-  lg: 3.2rem,
+  md-2: 3.2rem,
   //32px
-  md: 2.4rem,
+  md-1: 2.4rem,
   //24px
   base: 1.6rem,
   //16px

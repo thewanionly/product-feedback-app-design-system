@@ -80,13 +80,23 @@ $ls-sm: -0.02rem; //-0.2px
  * These values are not defined in the design file.
  * These values are based on an 4-8pt grid system.
  */
-
-$sp-xxxl: 5.6rem; //56px
-$sp-xxl: 4.8rem; //48px
-$sp-xl: 4rem; //40px
-$sp-lg: 3.2rem; //32px
-$sp-md: 2.4rem; //24px
-$sp-base: 1.6rem; //16px
-$sp-sm: 0.8rem; //8px
-$sp-xs: 0.4rem; //4px
-$sp-none: 0; //0px
+$spacing: (
+  xxxl: 5.6rem,
+  //56px
+  xxl: 4.8rem,
+  //48px
+  xl: 4rem,
+  //40px
+  lg: 3.2rem,
+  //32px
+  md: 2.4rem,
+  //24px
+  base: 1.6rem,
+  //16px
+  sm: 0.8rem,
+  //8px
+  xs: 0.4rem,
+  //4px
+  none: 0,
+  //0px
+) !default;

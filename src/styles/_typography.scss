@@ -26,6 +26,13 @@ $body-font-weight-1: var(--pfa-body-font-weight-1, $fw-regular) !default;
 $body-font-weight-2: var(--pfa-body-font-weight-2, $fw-semibold) !default;
 
 /*=============================================
+=              Body Line heights              =
+=============================================*/
+$body-line-height-1: var(--pfa-body-line-height-1, $lh-base) !default;
+$body-line-height-2: var(--pfa-body-line-height-2, $lh-sm) !default;
+$body-line-height-3: var(--pfa-body-line-height-3, $lh-xxs) !default;
+
+/*=============================================
 =            Heading font sizes               =
 =============================================*/
 $h-1-font-size: var(--pfa-h1-font-size, $h-1) !default;
@@ -47,8 +54,12 @@ $h-3-letter-spacing: var(--pfa-h3-letter-spacing, $ls-base) !default;
 $h-4-letter-spacing: var(--pfa-h4-letter-spacing, $ls-sm) !default;
 
 /*=============================================
-=           Line heights                     =
+=           Heading Line heights              =
 =============================================*/
+$h-1-line-height: var(--pfa-h1-line-height, $lh-xxl) !default;
+$h-2-line-height: var(--pfa-h2-line-height, $lh-xl) !default;
+$h-3-line-height: var(--pfa-h3-line-height, $lh-lg) !default;
+$h-4-line-height: var(--pfa-h4-line-height, $lh-xs) !default;
 
 /*=============================================
 =                Spacing                      =

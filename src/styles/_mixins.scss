@@ -1,0 +1,70 @@
+/*=============================================
+                #MIXINS
+=============================================*/
+
+/**
+ *
+ * Helpful reusable function-like things that will be used to implement
+ * styles for components. These are used in other scss files.
+ *
+ */
+
+/*=============================================
+=            Padding                          =
+=============================================*/
+
+@mixin padding($space) {
+  padding: map-get($spacing, $space);
+}
+
+@mixin padding-top($space) {
+  padding-top: map-get($spacing, $space);
+}
+
+@mixin padding-right($space) {
+  padding-right: map-get($spacing, $space);
+}
+
+@mixin padding-bottom($space) {
+  padding-bottom: map-get($spacing, $space);
+}
+
+@mixin padding-left($space) {
+  padding-left: map-get($spacing, $space);
+}
+
+/*=============================================
+=            Margin                           =
+=============================================*/
+
+@mixin margin($space) {
+  margin: map-get($spacing, $space);
+}
+
+@mixin margin-top($space) {
+  margin-top: map-get($spacing, $space);
+}
+
+@mixin margin-right($space) {
+  margin-right: map-get($spacing, $space);
+}
+
+@mixin margin-bottom($space) {
+  margin-bottom: map-get($spacing, $space);
+}
+
+@mixin margin-left($space) {
+  margin-left: map-get($spacing, $space);
+}
+
+/*=============================================
+=            Width and Height                 =
+=============================================*/
+
+@mixin width($space) {
+  width: map-get($spacing, $space);
+}
+
+@mixin height($space) {
+  width: map-get($spacing, $space);
+}

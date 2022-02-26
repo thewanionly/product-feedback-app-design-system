@@ -1,13 +1,14 @@
 .button {
-  padding: 10px 15px;
-  border-radius: 10px;
+  @include padding-vertical('sm');
+  @include padding-horizontal('base');
+  border-radius: map-get($spacing, 'sm');
   border: none;
   cursor: pointer;
 
   /** SIZES **/
   &.medium {
-    width: 158px;
-    height: 44px;
+    @include width('xxl-1');
+    @include height('md-4');
   }
 
   /** TYPES **/

@@ -1,9 +1,12 @@
+@import '../../styles/main.scss';
+
 .button {
+  cursor: pointer;
+
   @include padding-vertical('sm');
   @include padding-horizontal('base');
-  border-radius: map-get($spacing, 'sm');
   border: none;
-  cursor: pointer;
+  border-radius: map-get($spacing, 'sm');
 
   /** SIZES **/
   &.medium {

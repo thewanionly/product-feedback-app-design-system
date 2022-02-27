@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './Button.module.scss'
-
 const BUTTON_TYPES = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
@@ -23,7 +21,7 @@ const BUTTON_ICON_POS = {
 }
 
 const Button = ({ className, type, size, onClick, icon, iconPos, children }) => {
-  const buttonClassName = `${styles.button} ${styles[type]} ${styles[size]} ${className}`
+  const buttonClassName = `button ${type} ${size} ${className}`
 
   return (
     <button className={buttonClassName} onClick={onClick}>

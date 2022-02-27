@@ -43,8 +43,12 @@ This design system is built with `create-react-app` to bootstrap the application
 
 8. Make sure all packages are separated by their purpose: "dependencies" and "devDependencies".
 
-9. Build your app before publishing.
+9. Don't include the `storybook` files in your build.
 
-10. Publish to npm using the ff command: `npm publish --access public`
+10. Build your app before publishing: `npm run build`
+
+11. Only the `dist` folder will be included in our package. Specify it in package.json under `files` key
+
+12. Publish to npm using the ff command: `npm publish --access public`
 
 For the full details of the steps, refer here: https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/

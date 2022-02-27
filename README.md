@@ -10,12 +10,13 @@ This design system is built with `create-react-app` to bootstrap the application
 1. Register an npm account at npmjs.com
 2. Login in npm through your terminal under your project's directory.
 3. Use `@babel/cli` and `cross-env` to help us with the build process.
-4. Use the existing build script and change it to build our design system to the dist directory:
+4. Use the existing build script and change it to build our design system to the dist directory.
+   Add script to transpile scss to css too.
 
 ```
 {
   "scripts": {
-    "build": "cross-env BABEL_ENV=production babel src -d dist"
+    "build": "cross-env BABEL_ENV=production babel src -d dist && node-sass src/ -o dist",
   }
 }
 ```
@@ -43,7 +44,7 @@ This design system is built with `create-react-app` to bootstrap the application
 
 8. Make sure all packages are separated by their purpose: "dependencies" and "devDependencies".
 
-9. Don't include the `storybook` files in your build.
+9. Don't include the `storybook` files in your build. (TODO)
 
 10. Build your app before publishing: `npm run build`
 

@@ -2,13 +2,12 @@
   cursor: pointer;
 
   @include padding-vertical('sm');
-  @include padding-horizontal('base');
+  @include padding-horizontal('md-2');
   border: none;
   border-radius: map-get($spacing, 'sm');
 
   /** SIZES **/
   &.medium {
-    @include width('xxl-1');
     @include height('md-4');
   }
 

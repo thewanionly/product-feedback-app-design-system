@@ -3,8 +3,8 @@ import React from 'react'
 import Button, { BUTTON_TYPES, BUTTON_SIZES, BUTTON_ICON_POS } from './Button.jsx'
 
 export default {
+  title: 'Atoms/Button',
   component: Button,
-  title: 'Button',
   argTypes: {
     type: {
       control: false

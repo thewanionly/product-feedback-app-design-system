@@ -20,24 +20,25 @@ const BUTTON_ICON_POS = {
   RIGHT: 'right'
 }
 
-const Button = ({ className, type, size, onClick, icon, iconPos, children }) => {
+const Button = ({ className, label, type, size, onClick, icon, iconPos, children }) => {
   const buttonClassName = `button ${type} ${size} ${className}`
 
   return (
     <button className={buttonClassName} onClick={onClick}>
-      <h4>{children}</h4>
+      {children || <h4>{label}</h4>}
     </button>
   )
 }
 
 Button.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  label: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BUTTON_TYPES)),
   size: PropTypes.oneOf(Object.values(BUTTON_SIZES)),
   onClick: PropTypes.func,
   icon: PropTypes.string,
-  iconPos: PropTypes.oneOf(Object.values(BUTTON_ICON_POS))
+  iconPos: PropTypes.oneOf(Object.values(BUTTON_ICON_POS)),
+  children: PropTypes.element.isRequired
   // isLoading
   // loadingText
   // isDisabled
@@ -45,8 +46,10 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: '',
+  label: '',
   type: BUTTON_TYPES.PRIMARY,
   size: BUTTON_SIZES.MEDIUM,
+  onClick: undefined,
   icon: '',
   iconPos: BUTTON_ICON_POS.LEFT
   // isLoading: false,

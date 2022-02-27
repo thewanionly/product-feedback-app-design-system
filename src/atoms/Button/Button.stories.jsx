@@ -4,31 +4,43 @@ import Button, { BUTTON_TYPES, BUTTON_SIZES, BUTTON_ICON_POS } from './Button.js
 
 export default {
   component: Button,
-  title: 'Button'
+  title: 'Button',
+  argTypes: {
+    type: {
+      control: false
+    },
+    children: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
-const Primary = (args) => (
-  <Button type={BUTTON_TYPES.PRIMARY} {...args}>
-    Primary
-  </Button>
-)
+const Template = (args) => <Button {...args} />
 
-const Secondary = (args) => (
-  <Button type={BUTTON_TYPES.SECONDARY} {...args}>
-    Secondary
-  </Button>
-)
+const Primary = Template.bind({})
+Primary.args = {
+  type: BUTTON_TYPES.PRIMARY,
+  label: 'Primary'
+}
 
-const Tertiary = (args) => (
-  <Button type={BUTTON_TYPES.TERTIARY} {...args}>
-    Tertiary
-  </Button>
-)
+const Secondary = Template.bind({})
+Secondary.args = {
+  type: BUTTON_TYPES.SECONDARY,
+  label: 'Secondary'
+}
 
-const Danger = (args) => (
-  <Button type={BUTTON_TYPES.DANGER} {...args}>
-    Danger
-  </Button>
-)
+const Tertiary = Template.bind({})
+Tertiary.args = {
+  type: BUTTON_TYPES.TERTIARY,
+  label: 'Tertiary'
+}
+
+const Danger = Template.bind({})
+Danger.args = {
+  type: BUTTON_TYPES.DANGER,
+  label: 'Danger'
+}
 
 export { Primary, Secondary, Tertiary, Danger }

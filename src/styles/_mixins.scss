@@ -78,13 +78,33 @@
 }
 
 /*=============================================
-=            Width and Height                 =
+=                  Width                      =
 =============================================*/
 
 @mixin width($space) {
   width: map-get($spacing, $space);
 }
 
+@mixin min-width($space) {
+  min-width: map-get($spacing, $space);
+}
+
+@mixin max-width($space) {
+  max-width: map-get($spacing, $space);
+}
+
+/*=============================================
+=                   Height                    =
+=============================================*/
+
 @mixin height($space) {
   height: map-get($spacing, $space);
+}
+
+@mixin min-height($space) {
+  min-height: map-get($spacing, $space);
+}
+
+@mixin max-height($space) {
+  max-height: map-get($spacing, $space);
 }

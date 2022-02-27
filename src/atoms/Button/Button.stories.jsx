@@ -22,25 +22,29 @@ const Template = (args) => <Button {...args} />
 const Primary = Template.bind({})
 Primary.args = {
   type: BUTTON_TYPES.PRIMARY,
-  label: 'Primary'
+  label: 'Primary',
+  size: BUTTON_SIZES.MEDIUM
 }
 
 const Secondary = Template.bind({})
 Secondary.args = {
   type: BUTTON_TYPES.SECONDARY,
-  label: 'Secondary'
+  label: 'Secondary',
+  size: BUTTON_SIZES.MEDIUM
 }
 
 const Tertiary = Template.bind({})
 Tertiary.args = {
   type: BUTTON_TYPES.TERTIARY,
-  label: 'Tertiary'
+  label: 'Tertiary',
+  size: BUTTON_SIZES.MEDIUM
 }
 
 const Danger = Template.bind({})
 Danger.args = {
   type: BUTTON_TYPES.DANGER,
-  label: 'Danger'
+  label: 'Danger',
+  size: BUTTON_SIZES.MEDIUM
 }
 
 export { Primary, Secondary, Tertiary, Danger }

@@ -2,13 +2,23 @@
   cursor: pointer;
 
   @include padding-vertical('sm');
-  @include padding-horizontal('md-2');
   border: none;
   border-radius: map-get($spacing, 'sm');
 
   /** SIZES **/
+  &.small {
+    @include padding-horizontal('md-1');
+    @include height('md-3');
+  }
+
   &.medium {
+    @include padding-horizontal('md-2');
     @include height('md-4');
+  }
+
+  &.large {
+    @include padding-horizontal('md-3');
+    @include height('lg-1');
   }
 
   /** TYPES **/

@@ -7,8 +7,7 @@ export default {
   component: Button,
   argTypes: {
     icon: {
-      options: Object.values(BUTTON_ICONS),
-      control: { type: 'select' }
+      options: Object.values(BUTTON_ICONS)
     }
     // type: {
     //   control: false
@@ -58,6 +57,16 @@ Danger.parameters = {
   controls: { include: ['label', 'size'] }
 }
 
+const NoBg = Template.bind({})
+NoBg.args = {
+  type: BUTTON_TYPES.NO_BG,
+  label: 'No BG',
+  size: BUTTON_SIZES.MEDIUM
+}
+NoBg.parameters = {
+  controls: { include: ['label', 'size'] }
+}
+
 const WithIcon = Template.bind({})
 WithIcon.args = {
   label: 'With Icon',
@@ -70,4 +79,15 @@ WithIcon.parameters = {
   controls: { include: ['type', 'iconPos', 'icon', 'label', 'size'] }
 }
 
-export { Primary, Secondary, Tertiary, Danger, WithIcon }
+const LinkButton = Template.bind({})
+LinkButton.args = {
+  label: 'Link with BG',
+  isLink: true,
+  type: BUTTON_TYPES.TERTIARY,
+  size: BUTTON_SIZES.MEDIUM
+}
+LinkButton.parameters = {
+  controls: { include: ['type', 'isLink', 'iconPos', 'icon', 'label', 'size'] }
+}
+
+export { Primary, Secondary, Tertiary, Danger, NoBg, WithIcon, LinkButton }

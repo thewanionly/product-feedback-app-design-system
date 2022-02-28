@@ -29,6 +29,13 @@
     &:hover {
       background-color: $btn-primary-bg-hover-color;
     }
+
+    &.link {
+      &:hover {
+        background-color: $btn-primary-bg-color;
+        text-decoration: underline;
+      }
+    }
   }
 
   &.secondary {
@@ -37,6 +44,13 @@
 
     &:hover {
       background-color: $btn-secondary-bg-hover-color;
+    }
+
+    &.link {
+      &:hover {
+        background-color: $btn-secondary-bg-color;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -47,6 +61,13 @@
     &:hover {
       background-color: $btn-tertiary-bg-hover-color;
     }
+
+    &.link {
+      &:hover {
+        background-color: $btn-tertiary-bg-color;
+        text-decoration: underline;
+      }
+    }
   }
 
   &.danger {
@@ -55,6 +76,29 @@
 
     &:hover {
       background-color: $btn-danger-bg-hover-color;
+    }
+
+    &.link {
+      &:hover {
+        background-color: $btn-danger-bg-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.no-bg {
+    background-color: transparent;
+    color: $btn-no-bg-text-color;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.link {
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
     }
   }
 

@@ -8,7 +8,7 @@ const BUTTON_TYPES = {
   SECONDARY: 'secondary',
   TERTIARY: 'tertiary',
   DANGER: 'danger',
-  LINK: 'link'
+  NO_BG: 'no-bg'
 }
 
 const BUTTON_SIZES = {
@@ -29,9 +29,10 @@ const BUTTON_ICONS = {
   PLUS: 'plus'
 }
 
-const Button = ({ className, label, type, size, onClick, icon, iconPos, children }) => {
+const Button = ({ className, label, type, size, onClick, icon, iconPos, isLink, children }) => {
   const buttonIconClassName = `${icon ? `with-icon ${iconPos}-icon` : ''}`
-  const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${className}`
+  const linkClassName = isLink ? 'link' : ''
+  const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${linkClassName} ${className}`
 
   return (
     <button className={buttonClassName} onClick={onClick}>
@@ -49,6 +50,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   icon: PropTypes.oneOf(Object.values(BUTTON_ICONS)),
   iconPos: PropTypes.oneOf(Object.values(BUTTON_ICON_POS)),
+  isLink: PropTypes.bool,
   children: PropTypes.element.isRequired
   // isLoading
   // loadingText
@@ -62,6 +64,7 @@ Button.defaultProps = {
   size: BUTTON_SIZES.MEDIUM,
   onClick: undefined,
   icon: '',
+  isLink: false,
   iconPos: BUTTON_ICON_POS.LEFT
   // isLoading: false,
   // loadingText: null,

@@ -102,23 +102,43 @@
     }
   }
 
-  /** ICON POS **/
+  /** WITH ICON **/
   &.with-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     @include space('gap', 'base');
-
-    &.left-icon {
-      svg {
-        order: 0;
-      }
-    }
-
-    &.right-icon {
-      svg {
-        order: 1;
-      }
-    }
   }
+}
+
+/** ICON COLORS **/
+.button-with-bg-icon {
+  // All icons that are in BUTTON_ICONS uses path.stroke and text.fill
+  path {
+    stroke: $main-btn-text-color;
+  }
+
+  text {
+    fill: $main-btn-text-color;
+  }
+}
+
+.button-no-bg-icon {
+  // All icons that are in BUTTON_ICONS uses path.stroke and text.fill
+  path {
+    stroke: $btn-no-bg-text-color;
+  }
+
+  text {
+    fill: $btn-no-bg-text-color;
+  }
+}
+
+/** ICON POS **/
+.left-icon {
+  order: 0;
+}
+
+.right-icon {
+  order: 1;
 }

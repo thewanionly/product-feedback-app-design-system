@@ -30,13 +30,16 @@ const BUTTON_ICONS = {
 }
 
 const Button = ({ className, label, type, size, onClick, icon, iconPos, isLink, children }) => {
-  const buttonIconClassName = `${icon ? `with-icon ${iconPos}-icon` : ''}`
+  const buttonIconClassName = `${icon ? 'with-icon' : ''}`
   const linkClassName = isLink ? 'link' : ''
+  const iconClassName = `${
+    type !== 'no-bg' ? 'button-with-bg-icon' : 'button-no-bg-icon'
+  } ${iconPos}-icon`
   const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${linkClassName} ${className}`
 
   return (
     <button className={buttonClassName} onClick={onClick}>
-      {icon && <Icon name={icon} />}
+      {icon && <Icon className={iconClassName} name={icon} />}
       {children || <h4>{label}</h4>}
     </button>
   )

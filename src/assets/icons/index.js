@@ -1,0 +1,10 @@
+export { default as IconArrowDown } from "./IconArrowDown";
+export { default as IconArrowLeft } from "./IconArrowLeft";
+export { default as IconArrowUp } from "./IconArrowUp";
+export { default as IconCheck } from "./IconCheck";
+export { default as IconClose } from "./IconClose";
+export { default as IconComments } from "./IconComments";
+export { default as IconEditFeedback } from "./IconEditFeedback";
+export { default as IconHamburger } from "./IconHamburger";
+export { default as IconNewFeedback } from "./IconNewFeedback";
+export { default as IconPlus } from "./IconPlus";

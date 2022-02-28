@@ -53,3 +53,19 @@ This design system is built with `create-react-app` to bootstrap the application
 12. Publish to npm using the ff command: `npm publish --access public`
 
 For the full details of the steps, refer here: https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/
+
+## Stpes in hosting svg icons
+
+1. Make an `icons` directory under `src`. Import all your svg icons there.
+2. Install svgr: `npm i -D @svgr/cli
+3. Add a `compile-icons` script in your package.json:
+
+```
+    "compile-icons": "npx @svgr/cli -d src/icons src/icons"
+```
+
+Ideally the command above should work but there's a bug (read here: https://github.com/gregberge/svgr/issues/51) that makes it not working as expected. To address that, change the script to the ff instead:
+
+```
+    "compile-icons": "node node_modules/@svgr/cli/bin/svgr -d src/assets/icons src/assets/icons"
+```

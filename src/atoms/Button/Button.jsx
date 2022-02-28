@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Icon from '../Icon/Icon.jsx'
+
 const BUTTON_TYPES = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
@@ -20,11 +22,20 @@ const BUTTON_ICON_POS = {
   RIGHT: 'right'
 }
 
+const BUTTON_ICONS = {
+  ARROW_DOWN: 'arrow-down',
+  ARROW_LEFT: 'arrow-left',
+  ARROW_UP: 'arrow-up',
+  PLUS: 'plus'
+}
+
 const Button = ({ className, label, type, size, onClick, icon, iconPos, children }) => {
-  const buttonClassName = `button ${type} ${size} ${className}`
+  const buttonIconClassName = `${icon ? `with-icon ${iconPos}-icon` : ''}`
+  const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${className}`
 
   return (
     <button className={buttonClassName} onClick={onClick}>
+      {icon && <Icon name={icon} />}
       {children || <h4>{label}</h4>}
     </button>
   )
@@ -36,7 +47,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(Object.values(BUTTON_TYPES)),
   size: PropTypes.oneOf(Object.values(BUTTON_SIZES)),
   onClick: PropTypes.func,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(BUTTON_ICONS)),
   iconPos: PropTypes.oneOf(Object.values(BUTTON_ICON_POS)),
   children: PropTypes.element.isRequired
   // isLoading
@@ -57,5 +68,5 @@ Button.defaultProps = {
   // isDisabled: false,
 }
 
-export { BUTTON_TYPES, BUTTON_SIZES, BUTTON_ICON_POS }
+export { BUTTON_TYPES, BUTTON_SIZES, BUTTON_ICONS, BUTTON_ICON_POS }
 export default Button

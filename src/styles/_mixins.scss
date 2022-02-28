@@ -108,3 +108,11 @@
 @mixin max-height($space) {
   max-height: map-get($spacing, $space);
 }
+
+/*=============================================
+=               Generic Spacing               =
+=============================================*/
+
+@mixin space($property, $value) {
+  #{$property}: map-get($spacing, $value);
+}

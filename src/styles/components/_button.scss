@@ -57,4 +57,24 @@
       background-color: $btn-danger-bg-hover-color;
     }
   }
+
+  /** ICON POS **/
+  &.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include space('gap', 'base');
+
+    &.left-icon {
+      svg {
+        order: 0;
+      }
+    }
+
+    &.right-icon {
+      svg {
+        order: 1;
+      }
+    }
+  }
 }

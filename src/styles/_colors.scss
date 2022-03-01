@@ -29,3 +29,13 @@ $btn-danger-bg-color: var(--pfa-btn-danger-bg-color, $red) !default;
 $btn-danger-bg-hover-color: var(--pfa-btn-danger-bg-hover-color, $red-light) !default;
 
 $btn-with-icon-bg-color: var(--pfa-btn-with-icon-bg-color, $navy-blue-dark) !default;
+
+/*=============================================
+=            Form elements colors             =
+=============================================*/
+$input-bg-color: var(--pfa-input-bg-color, $gray-light) !default;
+
+$input-active-color: var(--pfa-input-active-color, $blue) !default;
+$input-error-color: var(--pfa-input-error-color, $red) !default;
+
+$dropdown-option-hovered-color: var(--pfa-dropdown-option-hovered-color, $purple) !default;

@@ -1,9 +1,9 @@
 .button {
   cursor: pointer;
 
-  @include padding-vertical('sm');
+  @include padding-vertical('sm-1');
   border: none;
-  border-radius: map-get($spacing, 'sm');
+  @include space('border-radius', 'sm-1');
 
   /** SIZES **/
   &.small {

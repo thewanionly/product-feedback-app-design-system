@@ -25,6 +25,13 @@
 
   --pfa-btn-with-icon-bg-color: #{$navy-blue-dark};
 
+  --pfa-input-bg-color: #{$gray-light};
+
+  --pfa-input-active-color: #{$blue};
+  --pfa-input-error-color: #{$red};
+
+  --pfa-dropdown-option-hovered-color: #{$purple};
+
   //Typography
   --pfa-body-font-family: #{$jost};
 
@@ -80,6 +87,7 @@ html {
 body {
   font-family: $body-font-family;
   font-size: $body-font-size-1;
+  font-weight: $body-font-weight-1;
   line-height: $body-line-height-1;
 }
 

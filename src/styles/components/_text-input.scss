@@ -1,0 +1,51 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  @include space('gap', 'xs');
+
+  // input element container
+  &__field-container {
+    background-color: $input-bg-color;
+    @include space('border-radius', 'xs');
+
+    @include space('border-width', 'xxs');
+    border-style: solid;
+    border-color: $input-bg-color;
+
+    &:focus-within {
+      border-color: $input-active-color;
+    }
+
+    &.error {
+      border-color: $input-error-color;
+    }
+
+    /** SIZES **/
+    &.small {
+      @include padding-horizontal('base');
+      @include padding-vertical('sm-1');
+    }
+
+    &.medium {
+      @include padding-horizontal('md-1');
+      @include padding-vertical('sm-2');
+    }
+
+    &.large {
+      @include padding-horizontal('md-2');
+      @include padding-vertical('base');
+    }
+  }
+
+  // input element
+  &__field {
+    all: unset;
+    width: 100%;
+  }
+
+  // error span
+  &__error-text {
+    color: $input-error-color;
+    font-size: $body-font-size-3;
+  }
+}

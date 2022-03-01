@@ -16,8 +16,10 @@ const spaces = {
   'md-2': 'md-2', //32px
   'md-1': 'md-1', //24px
   base: 'base', //16px
-  sm: 'sm', //8px
+  'sm-2': 'sm-2', //12px
+  'sm-1': 'sm-1', //8px
   xs: 'xs', //4px
+  xxs: 'xxs', //1px
   none: 'none' //0px
 }
 

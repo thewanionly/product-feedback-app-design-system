@@ -44,8 +44,8 @@ const Chip = ({
   isClickable,
   onClick
 }) => {
-  const chipIconClassName = `${!children && icon ? 'with-icon' : ''}`
-  const iconClassName = ` ${iconPos}-icon`
+  const chipIconClassName = `${!children && icon ? `with-icon ${iconPos}` : ''}`
+  const iconClassName = `chip-icon ${iconPos}-icon`
   const clickableClassname = isClickable ? 'clickable' : ''
 
   const chipClassName = `chip ${className} ${size} ${chipIconClassName} ${clickableClassname}`
@@ -71,6 +71,7 @@ Chip.propTypes = {
   icon: PropTypes.oneOf(Object.values(CHIP_ICONS)),
   iconPos: PropTypes.oneOf(Object.values(CHIP_ICON_POS)),
   size: PropTypes.oneOf(Object.values(CHIP_SIZES)),
+  onClick: PropTypes.func,
   isClickable: PropTypes.bool,
   children: PropTypes.element
 }

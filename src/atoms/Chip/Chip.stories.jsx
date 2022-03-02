@@ -32,7 +32,7 @@ Standard.parameters = {
 
 const Clickable = Template.bind({})
 Clickable.args = {
-  label: '100',
+  label: 'Feature',
   labelColor: CHIP_LABEL_COLOR.NAVY_BLUE,
   labelWeight: CHIP_LABEL_WEIGHT.BOLD,
   size: CHIP_SIZES.MEDIUM,
@@ -42,4 +42,20 @@ Clickable.parameters = {
   controls: { include: ['label', 'labelColor', 'labelWeight', 'size'] }
 }
 
-export { Standard, Clickable }
+const WithIcon = Template.bind({})
+WithIcon.args = {
+  icon: CHIP_ICONS.ARROW_UP,
+  iconPos: CHIP_ICON_POS.TOP,
+  label: '100',
+  labelColor: CHIP_LABEL_COLOR.NAVY_BLUE,
+  labelWeight: CHIP_LABEL_WEIGHT.BOLD,
+  size: CHIP_SIZES.MEDIUM,
+  isClickable: true
+}
+WithIcon.parameters = {
+  controls: {
+    include: ['label', 'labelColor', 'labelWeight', 'icon', 'iconPos', 'size', 'isClickable']
+  }
+}
+
+export { Standard, Clickable, WithIcon }

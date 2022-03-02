@@ -2,20 +2,33 @@
   background-color: $chip-default-bg-color;
   @include space('border-radius', 'sm-2');
 
-  /** SIZES **/
+  /** SIZES (horizontal orientation) **/
   &.small {
-    @include padding-horizontal('sm-2');
+    @include padding-horizontal('sm-1');
     @include padding-vertical('xs');
   }
 
   &.medium {
-    @include padding-horizontal('base');
+    @include padding-horizontal('sm-2');
     @include padding-vertical('sm-1');
   }
 
   &.large {
-    @include padding-horizontal('md-1');
+    @include padding-horizontal('base');
     @include padding-vertical('sm-2');
+  }
+
+  .chip-icon {
+    /** ICON POS **/
+    &.left-icon,
+    &.top-icon {
+      order: 0;
+    }
+
+    &.right-icon,
+    &.bottom-icon {
+      order: 1;
+    }
   }
 
   .chip-label {
@@ -38,6 +51,40 @@
     }
   }
 
+  /** WITH ICON **/
+  &.with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include space('gap', 'sm-1');
+
+    &.left,
+    &.right {
+      flex-direction: row;
+    }
+
+    &.top,
+    &.bottom {
+      flex-direction: column;
+
+      /** SIZES (vertical orientation) **/
+      &.small {
+        @include padding-vertical('xs');
+        @include padding-horizontal('xs');
+      }
+
+      &.medium {
+        @include padding-vertical('sm-1');
+        @include padding-horizontal('sm-1');
+      }
+
+      &.large {
+        @include padding-vertical('sm-2');
+        @include padding-horizontal('sm-2');
+      }
+    }
+  }
+
   /** Clickable **/
   &.clickable {
     cursor: pointer;
@@ -48,6 +95,12 @@
 
     &:active {
       background-color: $chip-active-bg-color;
+
+      .chip-icon {
+        path {
+          stroke: $chip-active-color;
+        }
+      }
 
       .chip-label {
         color: $chip-active-color;

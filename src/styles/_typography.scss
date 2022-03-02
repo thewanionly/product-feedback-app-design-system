@@ -62,5 +62,7 @@ $h-3-line-height: var(--pfa-h3-line-height, $lh-lg) !default;
 $h-4-line-height: var(--pfa-h4-line-height, $lh-xs) !default;
 
 /*=============================================
-=                Spacing                      =
+=            Chip font weights                =
 =============================================*/
+$chip-semibold: var(--pfa-chip-semibold, $fw-semibold) !default;
+$chip-bold: var(--pfa-chip-bold, $fw-bold) !default;

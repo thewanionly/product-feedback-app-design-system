@@ -18,6 +18,7 @@ $purple-light: #c75af6;
 
 $blue: #4661e6;
 $blue-light: #7c91f9;
+$blue-lighter: #cfd7ff;
 
 $navy-blue-dark: #373f68;
 $navy-blue: #3a4374;
@@ -116,13 +117,13 @@ $spacing: (
   base: 1.6rem,
   //16px
   sm-2: 1.2rem,
-  //8px
+  //12px
   sm-1: 0.8rem,
   //8px
   xs: 0.4rem,
   //4px
   xxs: 0.1rem,
-  //4px
+  //1px
   none: 0,
   //0px
 ) !default;

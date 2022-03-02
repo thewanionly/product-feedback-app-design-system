@@ -39,3 +39,15 @@ $input-active-color: var(--pfa-input-active-color, $blue) !default;
 $input-error-color: var(--pfa-input-error-color, $red) !default;
 
 $dropdown-option-hovered-color: var(--pfa-dropdown-option-hovered-color, $purple) !default;
+
+/*=============================================
+=                 Chip colors                 =
+=============================================*/
+$chip-default-bg-color: var(--pfa-chip-default-bg-color, $gray) !default;
+$chip-hover-bg-color: var(--pfa-chip-hover-bg-color, $blue-lighter) !default;
+$chip-active-bg-color: var(--pfa-chip-active-bg-color, $blue) !default;
+
+$chip-blue-label-color: var(--pfa-chip-blue-label-color, $blue) !default;
+$chip-navy-blue-label-color: var(--pfa-chip-navy-blue-label-color, $navy-blue) !default;
+
+$chip-active-color: var(--pfa-chip-active-color, $white) !default;

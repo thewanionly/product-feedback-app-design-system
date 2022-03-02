@@ -1,0 +1,57 @@
+.chip {
+  background-color: $chip-default-bg-color;
+  @include space('border-radius', 'sm-2');
+
+  /** SIZES **/
+  &.small {
+    @include padding-horizontal('sm-2');
+    @include padding-vertical('xs');
+  }
+
+  &.medium {
+    @include padding-horizontal('base');
+    @include padding-vertical('sm-1');
+  }
+
+  &.large {
+    @include padding-horizontal('md-1');
+    @include padding-vertical('sm-2');
+  }
+
+  .chip-label {
+    /** LABEL COLORS **/
+    &.blue-label {
+      color: $chip-blue-label-color;
+    }
+
+    &.navy-blue-label {
+      color: $chip-navy-blue-label-color;
+    }
+
+    /** LABEL WEIGHTS **/
+    &.semibold-label {
+      font-weight: $chip-semibold;
+    }
+
+    &.bold-label {
+      font-weight: $chip-bold;
+    }
+  }
+
+  /** Clickable **/
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $chip-hover-bg-color;
+    }
+
+    &:active {
+      background-color: $chip-active-bg-color;
+
+      .chip-label {
+        color: $chip-active-color;
+      }
+    }
+  }
+}

@@ -32,6 +32,15 @@
 
   --pfa-dropdown-option-hovered-color: #{$purple};
 
+  --pfa-chip-default-bg-color: #{$gray};
+  --pfa-chip-hover-bg-color: #{$blue-lighter};
+  --pfa-chip-active-bg-color: #{$blue};
+
+  --pfa-chip-blue-label-color: #{$blue};
+  --pfa-chip-navy-blue-label-color: #{$navy-blue};
+
+  --pfa-chip-active-color: #{$white};
+
   //Typography
   --pfa-body-font-family: #{$jost};
 
@@ -62,6 +71,9 @@
   --pfa-h2-letter-spacing: #{$ls-base};
   --pfa-h3-letter-spacing: #{$ls-base};
   --pfa-h4-letter-spacing: #{$ls-sm};
+
+  --pfa-chip-semibold: #{$fw-semibold};
+  --pfa-chip-bold: #{$fw-bold};
 }
 
 /*=============================================

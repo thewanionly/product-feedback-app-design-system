@@ -43,18 +43,4 @@ WithError.parameters = {
   controls: { include: ['size', 'placeholder', 'isError'] }
 }
 
-const MultiLine = Template.bind({})
-MultiLine.args = {
-  size: TEXT_INPUT_SIZES.MEDIUM,
-  placeholder: 'Placeholder here...',
-  isError: false,
-  required: false,
-  readonly: false,
-  disabled: false,
-  isMultiLine: true
-}
-MultiLine.parameters = {
-  controls: { include: ['size', 'placeholder', 'rows', 'maxlength'] }
-}
-
-export { Standard, WithError, MultiLine }
+export { Standard, WithError }

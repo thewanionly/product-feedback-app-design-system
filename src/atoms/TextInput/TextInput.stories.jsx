@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import TextInput, { TEXT_INPUT_SIZES } from './TextInput.jsx'
+import TextInput, { TEXT_INPUT_SIZES, TEXT_INPUT_ICONS } from './TextInput.jsx'
 
 export default {
   title: 'Atoms/TextInput',
@@ -43,4 +43,18 @@ WithError.parameters = {
   controls: { include: ['size', 'placeholder', 'isError'] }
 }
 
-export { Standard, WithError }
+const WithIcon = Template.bind({})
+WithIcon.args = {
+  size: TEXT_INPUT_SIZES.MEDIUM,
+  placeholder: 'Placeholder here...',
+  icon: TEXT_INPUT_ICONS.ARROW_DOWN,
+  isError: false,
+  required: false,
+  readonly: false,
+  disabled: false
+}
+WithIcon.parameters = {
+  controls: { include: ['size', 'icon', 'placeholder', 'isError'] }
+}
+
+export { Standard, WithError, WithIcon }

@@ -12,6 +12,10 @@
     border-style: solid;
     border-color: $input-bg-color;
 
+    display: flex;
+    align-items: center;
+    @include space('gap', 'sm-1');
+
     &:focus-within {
       border-color: $input-active-color;
     }

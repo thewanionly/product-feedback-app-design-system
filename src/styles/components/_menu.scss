@@ -1,0 +1,27 @@
+.menu {
+  @include width('xxxl-3');
+  background-color: $menu-bg-color;
+  @include space('border-radius', 'sm-1');
+  box-shadow: $box-shadow-1;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include padding-horizontal('md-1');
+    @include padding-vertical('sm-2');
+    color: $menu-item-default-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $menu-item-hover-color;
+    }
+
+    &:not(:last-of-type) {
+      @include space('border-bottom-width', 'xxs');
+      border-bottom-style: solid;
+      border-bottom-color: $menu-item-border-color;
+    }
+  }
+}

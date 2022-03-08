@@ -51,3 +51,13 @@ $chip-blue-label-color: var(--pfa-chip-blue-label-color, $blue) !default;
 $chip-navy-blue-label-color: var(--pfa-chip-navy-blue-label-color, $navy-blue) !default;
 
 $chip-active-color: var(--pfa-chip-active-color, $white) !default;
+
+/*=============================================
+=                     Menu colors             =
+=============================================*/
+$menu-bg-color: var(--pfa-menu-bg-color, $white) !default;
+
+$menu-item-default-color: var(--pfa-menu-item-default-color, $navy-blue-lighter) !default;
+$menu-item-hover-color: var(--pfa-menu-item-hover-color, $purple) !default;
+
+$menu-item-border-color: var(--pfa-menu-item-border-color, $navy-blue-15) !default;

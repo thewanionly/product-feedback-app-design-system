@@ -74,6 +74,11 @@
 
   --pfa-chip-semibold: #{$fw-semibold};
   --pfa-chip-bold: #{$fw-bold};
+
+  --pfa-menu-bg-color: #{$white};
+  --pfa-menu-item-default-color: #{$navy-blue-lighter};
+  --pfa-menu-item-hover-color: #{$purple};
+  --pfa-menu-item-border-color: #{$navy-blue-15};
 }
 
 /*=============================================

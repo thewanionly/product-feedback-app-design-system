@@ -22,6 +22,7 @@ $blue-lighter: #cfd7ff;
 
 $navy-blue-dark: #373f68;
 $navy-blue: #3a4374;
+$navy-blue-15: rgba(58, 67, 115, 0.15);
 $navy-blue-light: #656ea3;
 $navy-blue-lighter: #647196;
 
@@ -82,6 +83,12 @@ $ls-sm: -0.02rem; //-0.2px
  * These values are based on an 4-8pt grid system.
  */
 $spacing: (
+  xxxl-3: 25.6rem,
+  //256px
+  xxxl-2: 24rem,
+  //240px
+  xxxl-1: 22.4rem,
+  //224px
   xxl-4: 20.8rem,
   //208px
   xxl-3: 19.2rem,
@@ -127,3 +134,9 @@ $spacing: (
   none: 0,
   //0px
 ) !default;
+
+/*=============================================
+=                  Shadows                    =
+=============================================*/
+
+$box-shadow-1: 0px 10px 40px -7px rgba(55, 63, 104, 0.350492);

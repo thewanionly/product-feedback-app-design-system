@@ -2,15 +2,17 @@ import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon.jsx'
 
-const Menu = ({ className, menuItems, selectedItem, handleSelectItem }) => {
+const Menu = ({ className, menuItems, defaultSelected, selectedItem, handleSelectItem }) => {
   const menuClassName = `menu ${className}`
+
+  const selectedMenuItemValue = selectedItem?.value || defaultSelected?.value
 
   return (
     <div className={menuClassName}>
-      {menuItems.map(({ label, value }) => (
-        <div key={value} className='menu__item' onClick={() => handleSelectItem(value)}>
-          {label}
-          {selectedItem === value && <Icon name='check' />}
+      {menuItems.map((menuItem) => (
+        <div key={menuItem.value} className='menu__item' onClick={() => handleSelectItem(menuItem)}>
+          {menuItem.label}
+          {selectedMenuItemValue === menuItem.value && <Icon name='check' />}
         </div>
       ))}
     </div>

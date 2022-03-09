@@ -16,14 +16,24 @@ const TEXT_INPUT_ICONS = {
 
 const TEXT_INPUT_ERROR_MESSAGE = `Can't be empty`
 
-const TextInput = ({ className, size, isError, errorMessage, icon, ...props }) => {
+const TextInput = ({
+  className,
+  size,
+  isError,
+  errorMessage,
+  icon,
+  isClickable,
+  onClick,
+  ...props
+}) => {
+  const clickableClassname = isClickable ? 'clickable' : ''
   const textInputFieldContainerClassName = `text-input__field-container ${size} ${
     isError ? 'error' : ''
-  } ${className}`
+  } ${clickableClassname} ${className}`
 
   return (
     <div className='text-input'>
-      <div className={textInputFieldContainerClassName}>
+      <div className={textInputFieldContainerClassName} onClick={onClick}>
         <input className='text-input__field' type='text' {...props} />
         {icon && <Icon className='text_input__icon' name={icon} />}
       </div>
@@ -44,7 +54,9 @@ TextInput.propTypes = {
   icon: PropTypes.oneOf(Object.values(TEXT_INPUT_ICONS)),
   required: PropTypes.bool,
   readonly: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  isClickable: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 TextInput.defaultProps = {
@@ -58,7 +70,8 @@ TextInput.defaultProps = {
   onChange: undefined,
   required: false,
   readonly: false,
-  disabled: false
+  disabled: false,
+  isClickable: false
 }
 
 export { TEXT_INPUT_SIZES, TEXT_INPUT_ICONS }

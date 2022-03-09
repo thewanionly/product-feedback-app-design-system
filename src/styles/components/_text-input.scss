@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   @include space('gap', 'xs');
+  @include width('xxxl-3');
 
   // input element container
   &__field-container {
@@ -22,6 +23,10 @@
 
     &.error {
       border-color: $input-error-color;
+    }
+
+    &.clickable {
+      cursor: pointer;
     }
 
     /** SIZES **/

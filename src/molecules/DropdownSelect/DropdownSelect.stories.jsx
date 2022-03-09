@@ -1,10 +1,5 @@
 import { useState } from 'react'
-import Menu from './Menu.jsx'
-
-export default {
-  title: 'Atoms/Menu',
-  component: Menu
-}
+import DropdownSelect from './DropdownSelect.jsx'
 
 const mockedMenuItem = [
   {
@@ -29,19 +24,26 @@ const mockedMenuItem = [
   }
 ]
 
-const Template = (args) => {
-  const [selectedItem, setSelectedItem] = useState()
-
-  return <Menu selectedItem={selectedItem} handleSelectItem={setSelectedItem} {...args} />
+export default {
+  title: 'Molecules/DropdownSelect',
+  component: DropdownSelect
+  // argTypes: {
+  //   defaultValue: {
+  //     options: Object.values(mockedMenuItem)
+  //   }
+  // }
 }
+
+const Template = (args) => <DropdownSelect {...args} />
 
 const Standard = Template.bind({})
 Standard.args = {
   menuItems: mockedMenuItem,
-  defaultSelected: mockedMenuItem[0]
+  placeholder: 'Select an item...',
+  defaultValue: 'Feature'
 }
 Standard.parameters = {
-  controls: { exclude: ['menuItems', 'className', 'selectedItem'] }
+  controls: { include: ['placeholder'] }
 }
 
 export { Standard }

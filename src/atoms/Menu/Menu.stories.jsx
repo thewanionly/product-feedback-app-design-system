@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Menu from './Menu.jsx'
 
 export default {
-  title: 'Molecules/Menu',
+  title: 'Atoms/Menu',
   component: Menu
 }
 

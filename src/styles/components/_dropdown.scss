@@ -1,0 +1,8 @@
+.dropdown {
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    @include margin-top('base');
+  }
+}

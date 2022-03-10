@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, forwardRef, useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import Menu from '../../atoms/Menu/Menu.jsx'
@@ -25,27 +25,31 @@ const Dropdown = ({ className, children }) => {
   )
 }
 
-const DropdownToggle = ({ component: ToggleComponent, ...props }) => {
+const DropdownToggle = forwardRef(({ component: ToggleComponent, ...props }, ref) => {
   const { openMenu, toggleMenu, selectedItem } = useContext(DropdownContext)
 
   return (
     <ToggleComponent
+      ref={ref}
       isMenuOpen={openMenu}
       handleToggleMenu={() => toggleMenu((prevToggle) => !prevToggle)}
       selectedItem={selectedItem}
       {...props}
     />
   )
-}
+})
 
-const DropdownMenu = ({ className, menuItems, defaultSelected }) => {
+const DropdownMenu = ({ style, className, menuItems, defaultSelected }) => {
   const { openMenu, selectedItem, setSelectedItem } = useContext(DropdownContext)
+
+  const dropdownMenu = `dropdown__menu ${className}`
 
   return (
     <>
       {openMenu && (
         <Menu
-          className={className}
+          style={style}
+          className={dropdownMenu}
           menuItems={menuItems}
           defaultSelected={defaultSelected}
           selectedItem={selectedItem}

@@ -2,13 +2,13 @@ import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon.jsx'
 
-const Menu = ({ className, menuItems, defaultSelected, selectedItem, handleSelectItem }) => {
+const Menu = ({ style, className, menuItems, defaultSelected, selectedItem, handleSelectItem }) => {
   const menuClassName = `menu ${className}`
 
   const selectedMenuItemValue = selectedItem?.value || defaultSelected?.value
 
   return (
-    <div className={menuClassName}>
+    <div style={style} className={menuClassName}>
       {menuItems.map((menuItem) => (
         <div key={menuItem.value} className='menu__item' onClick={() => handleSelectItem(menuItem)}>
           {menuItem.label}
@@ -22,12 +22,14 @@ const Menu = ({ className, menuItems, defaultSelected, selectedItem, handleSelec
 export default Menu
 
 Menu.propTypes = {
+  style: PropTypes.object,
   className: PropTypes.string,
   menuItems: PropTypes.array,
   selectedItem: PropTypes.string
 }
 
 Menu.defaultProps = {
+  style: {},
   className: '',
   menuItems: []
 }

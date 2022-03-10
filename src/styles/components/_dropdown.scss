@@ -6,3 +6,16 @@
     @include margin-top('base');
   }
 }
+
+.dropdown-button {
+  &__content {
+    display: flex;
+    align-items: center;
+    @include space('gap', 'xs');
+  }
+
+  &__label {
+    font-weight: $body-font-weight-1;
+    font-size: $body-font-size-3;
+  }
+}

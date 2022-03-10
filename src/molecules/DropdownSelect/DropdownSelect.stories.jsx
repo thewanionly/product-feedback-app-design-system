@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import DropdownSelect from './DropdownSelect.jsx'
 
-const mockedMenuItem = [
+const mockedMenuItems = [
   {
     label: 'Feature',
     value: 'feature'
@@ -38,7 +37,7 @@ const Template = (args) => <DropdownSelect {...args} />
 
 const Standard = Template.bind({})
 Standard.args = {
-  menuItems: mockedMenuItem,
+  menuItems: mockedMenuItems,
   placeholder: 'Select an item...',
   defaultValue: 'Feature'
 }

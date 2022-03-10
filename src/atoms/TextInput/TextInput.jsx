@@ -1,4 +1,4 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon.jsx'
@@ -16,31 +16,24 @@ const TEXT_INPUT_ICONS = {
 
 const TEXT_INPUT_ERROR_MESSAGE = `Can't be empty`
 
-const TextInput = ({
-  className,
-  size,
-  isError,
-  errorMessage,
-  icon,
-  isClickable,
-  onClick,
-  ...props
-}) => {
-  const clickableClassname = isClickable ? 'clickable' : ''
-  const textInputFieldContainerClassName = `text-input__field-container ${size} ${
-    isError ? 'error' : ''
-  } ${clickableClassname} ${className}`
+const TextInput = forwardRef(
+  ({ className, size, isError, errorMessage, icon, isClickable, onClick, ...props }, ref) => {
+    const clickableClassname = isClickable ? 'clickable' : ''
+    const textInputFieldContainerClassName = `text-input__field-container ${size} ${
+      isError ? 'error' : ''
+    } ${clickableClassname} ${className}`
 
-  return (
-    <div className='text-input'>
-      <div className={textInputFieldContainerClassName} onClick={onClick}>
-        <input className='text-input__field' type='text' {...props} />
-        {icon && <Icon className='text_input__icon' name={icon} />}
+    return (
+      <div ref={ref} className='text-input'>
+        <div className={textInputFieldContainerClassName} onClick={onClick}>
+          <input className='text-input__field' type='text' {...props} />
+          {icon && <Icon className='text_input__icon' name={icon} />}
+        </div>
+        {isError && <span className='text-input__error-text'>{errorMessage}</span>}
       </div>
-      {isError && <span className='text-input__error-text'>{errorMessage}</span>}
-    </div>
-  )
-}
+    )
+  }
+)
 
 TextInput.propTypes = {
   className: PropTypes.string,

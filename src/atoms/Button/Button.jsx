@@ -1,4 +1,4 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 import Icon from '../Icon/Icon.jsx'
@@ -29,21 +29,23 @@ const BUTTON_ICONS = {
   PLUS: 'plus'
 }
 
-const Button = ({ className, label, type, size, onClick, icon, iconPos, isLink, children }) => {
-  const buttonIconClassName = `${icon ? 'with-icon' : ''}`
-  const linkClassName = isLink ? 'link' : ''
-  const iconClassName = `${
-    type !== 'no-bg' ? 'button-with-bg-icon' : 'button-no-bg-icon'
-  } ${iconPos}-icon`
-  const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${linkClassName} ${className}`
+const Button = forwardRef(
+  ({ className, label, type, size, onClick, icon, iconPos, isLink, children }, ref) => {
+    const buttonIconClassName = `${icon ? 'with-icon' : ''}`
+    const linkClassName = isLink ? 'link' : ''
+    const iconClassName = `${
+      type !== 'no-bg' ? 'button-with-bg-icon' : 'button-no-bg-icon'
+    } ${iconPos}-icon`
+    const buttonClassName = `button ${type} ${size} ${buttonIconClassName} ${linkClassName} ${className}`
 
-  return (
-    <button className={buttonClassName} onClick={onClick}>
-      {icon && <Icon className={iconClassName} name={icon} />}
-      {children || <h4>{label}</h4>}
-    </button>
-  )
-}
+    return (
+      <button ref={ref} className={buttonClassName} onClick={onClick}>
+        {icon && <Icon className={iconClassName} name={icon} />}
+        {children || <h4>{label}</h4>}
+      </button>
+    )
+  }
+)
 
 Button.propTypes = {
   className: PropTypes.string,

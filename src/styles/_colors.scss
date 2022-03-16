@@ -61,3 +61,9 @@ $menu-item-default-color: var(--pfa-menu-item-default-color, $navy-blue-lighter)
 $menu-item-hover-color: var(--pfa-menu-item-hover-color, $purple) !default;
 
 $menu-item-border-color: var(--pfa-menu-item-border-color, $navy-blue-15) !default;
+
+/*=============================================
+=               Form field colors             =
+=============================================*/
+$form-label-color: var(--pfa-form-label-color, $navy-blue) !default;
+$form-description-color: var(--pfa-form-description-color, $navy-blue-lighter) !default;

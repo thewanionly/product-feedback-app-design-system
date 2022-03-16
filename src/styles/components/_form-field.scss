@@ -1,0 +1,23 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-weight: $form-field-label-weight;
+    line-height: $form-field-label-line-height;
+
+    color: $form-label-color;
+  }
+
+  &__description {
+    @include margin-top('xs');
+    font-weight: $form-field-description-weight;
+    line-height: $form-field-description-line-height;
+
+    color: $form-description-color;
+  }
+
+  &__component {
+    @include margin-top('base');
+  }
+}

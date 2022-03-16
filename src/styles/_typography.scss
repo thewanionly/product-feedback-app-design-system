@@ -66,3 +66,12 @@ $h-4-line-height: var(--pfa-h4-line-height, $lh-xs) !default;
 =============================================*/
 $chip-semibold: var(--pfa-chip-semibold, $fw-semibold) !default;
 $chip-bold: var(--pfa-chip-bold, $fw-bold) !default;
+
+/*=============================================
+=            Form Field typography           =
+=============================================*/
+$form-field-label-weight: var(--pfa-form-field-label-weight, $fw-bold) !default;
+$form-field-label-line-height: var(--pfa-form-field-label-line-height, $lh-xs) !default;
+
+$form-field-description-weight: var(--pfa-form-field-description-weight, $fw-regular) !default;
+$form-field-description-line-height: var(--pfa-form-field-description-line-height, $lh-xs) !default;

@@ -41,6 +41,9 @@
 
   --pfa-chip-active-color: #{$white};
 
+  --pfa-form-label-color: #{$navy-blue};
+  --pfa-form-description-color: #{$navy-blue-lighter};
+
   //Typography
   --pfa-body-font-family: #{$jost};
 
@@ -79,6 +82,12 @@
   --pfa-menu-item-default-color: #{$navy-blue-lighter};
   --pfa-menu-item-hover-color: #{$purple};
   --pfa-menu-item-border-color: #{$navy-blue-15};
+
+  --pfa-form-field-label-weight: #{$fw-bold};
+  --pfa-form-field-label-line-height: #{$lh-xs};
+
+  --pfa-form-field-description-weight: #{$fw-regular};
+  --pfa-form-field-description-line-height: #{$lh-xs};
 }
 
 /*=============================================
